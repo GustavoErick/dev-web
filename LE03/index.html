@@ -22,21 +22,24 @@
                     <button type="button" class="btn btn-primary">Tzeet</button>
                 </ul>
             </div>
-            <div class="col-md-7 px-4 border-end"">
-                <div class="align-items-center mb-3">
-                    <img class="foto_perfil" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil">
-                    <div class="ms-3">
-                        <h4>Gustavo Erick Viana Leandro</h4>
-                        <h6 class="text-muted">@gustaerick</h6>
-                        <p>Graduando em Sistemas de Informação - UFC</p>
+            <div class="col-md-7 px-4 border-end">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="align-items-center">
+                        <img class="foto_perfil" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil">
+                        <div>
+                            <h4>Gustavo Erick Viana Leandro</h4>
+                            <h6 class="text-muted">@gustaerick</h6>
+                            <p>Graduando em Sistemas de Informação - UFC</p>
+                        </div>
                     </div>
                     <button type="button" class="btn btn-primary">Edit Profile</button>
                 </div>
-                <div class="d-flex text-muted mb-3">
+                
+                <div class="d-flex text-muted">
                     <p class="me-2"><i class="bi bi-geo-alt"></i> Madalena, CE</p>
                     <p><i class="bi bi-calendar"></i> Joined February 2020</p>
                 </div>
-                <div class="d-flex mb-4">
+                <div class="d-flex mb-2">
                     <p class="me-2"><strong>65</strong> Following</p>
                     <p><strong>15</strong> Followers</p>
                 </div>
@@ -51,17 +54,17 @@
                     <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de perfil do tzeet">
                     <p><strong>Beatriz Nascimento</strong> <span class="text-muted">@beatriznasc</span> <span class="text-muted">Dez 10, 2024</span></p>
                     <p>turma especial da peste</p>
-                    <div class="acao d-flex justify-content-between align-items-center">
-                        <a href="#" class="action-item d-flex align-items-center">
+                    <div class="acao d-flex justify-content-around align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
                             <i class="bi bi-chat me-2"></i><span>200</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="retzeet d-flex align-items-center">
                             <i class="bi bi-arrow-repeat me-2"></i><span>100</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="like d-flex align-items-center">
                             <i class="bi bi-heart me-2"></i><span>120</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
                             <i class="bi bi-share"></i>
                         </a>
                     </div>
@@ -71,45 +74,47 @@
                     <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil do tzeet">
                     <p><strong>Gustavo Erick</strong> <span class="text-muted">@gustaerick</span> <span class="text-muted">Dez 9, 2024</span></p>
                     <p>estudando uebe</p>
-                    <div class="acao d-flex justify-content-between align-items-center">
-                        <a href="#" class="action-item d-flex align-items-center">
+                    <div class="acao d-flex justify-content-around align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
                             <i class="bi bi-chat me-2"></i><span>200</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="retzeet d-flex align-items-center">
                             <i class="bi bi-arrow-repeat me-2"></i><span>100</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="like d-flex align-items-center">
                             <i class="bi bi-heart me-2"></i><span>120</span>
                         </a>
-                        <a href="#" class="action-item d-flex align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
                             <i class="bi bi-share"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 px-3">
-                <form class="d-flex mb-3">
-                    <input class="form-control" type="search" placeholder="Username" aria-label="Search">
+                <form class="search-container">
+                    <i class="bi bi-search search-icon"></i>
+                    <input class="search-input" type="search" placeholder="Username">
                 </form>
-                <div class="border p-3 rounded">
+                
+                <div class="sugestao border p-3 rounded">
                     <h5>Talvez você curta</h5>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="sugestao-item d-flex align-items-center mb-3">
                         <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
-                        <div class="ms-3 flex-grow-1">
+                        <div class="sugestao-item ms-3 flex-grow-1">
                             <a href="#">Carlos</a>
                         </div>
                         <button type="button" class="btn btn-primary">Seguir</button>
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="sugestao-item d-flex align-items-center mb-3">
                         <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
-                        <div class="ms-3 flex-grow-1">
+                        <div class="sugestao-item ms-3 flex-grow-1">
                             <a href="#">Maria</a>
                         </div>
                         <button type="button" class="btn btn-primary">Seguir</button>
                     </div>
-                    <div class="d-flex align-items-center mb-3">
+                    <div class="sugestao-item d-flex align-items-center mb-3">
                         <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
-                        <div class="ms-3 flex-grow-1">
+                        <div class="sugestao-item ms-3 flex-grow-1">
                             <a href="#">Ana</a>
                         </div>
                         <button type="button" class="btn btn-primary">Seguir</button>
@@ -117,6 +122,7 @@
                     <a href="#">Mostrar mais</a>
                 </div>
             </div>
+            
         </div>
     </div>
     
