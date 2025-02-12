@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Tzeeter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md-2 border-end">
+                <ul class="navegacao_publicacao">
+                    <img class="logo my-3" src="./tiziu.png" alt="logotipo tzeet">
+                    <li class="mb-3"><i class="bi bi-house-door"></i><a class="text-decoration-none" href="./index.html">Home</a></li>
+                    <li class="mb-3"><i class="bi bi-hash"></i><a class="text-decoration-none" href="#">Explore</a></li>
+                    <li class="mb-3"><i class="bi bi-envelope"></i><a class="text-decoration-none" href="#">Messages</a></li>
+                    <li class="mb-3"><i class="bi bi-person-fill"></i><a class="text-decoration-none" href="./profile.html">Profile</a></li>
+                    <li class="mb-3"><i class="bi bi-three-dots"></i><a class="text-decoration-none" href="#">More</a></li>
+                    <button id="open-modal" type="button" class="btn btn-primary">Tzeet</button>
+                </ul>
+            </div>
+
+            <div class="col-9 col-md-7 px-4 border-end">
+                <h2>Home</h2>
+                <div class="post-container">
+                    <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil">
+                    <div class="post-content">
+                        <textarea class="post-input" placeholder="O que você está pensando?"></textarea>
+                        <div class="reply-settings">
+                            <i class="bi bi-globe"></i>
+                            <a href="#">Todos podem responder</a>
+                        </div>
+                        <div class="post-actions">
+                            <div class="multimedia-icons">
+                                <i class="bi bi-card-image"></i>
+                                <i class="bi bi-filetype-gif"></i>
+                                <i class="bi bi-emoji-smile"></i>
+                                <i class="bi bi-list"></i>
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+            
+                            <div class="status-send">
+                                <span class="char-counter"></span>
+                                <span class="separator">|</span>
+                                <i class="bi bi-plus-circle add-tzeet"></i>
+                                <button class="send-btn" disabled>Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post mb-3">
+                    <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de perfil do tzeet">
+                    <p><strong>Beatriz Nascimento</strong> <span class="text-muted">@beatriznasc</span> <span class="text-muted">Dez 10, 2024</span></p>
+                    <p>turma especial da peste</p>
+                    <div class="acao d-flex justify-content-around align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
+                            <i class="bi bi-chat me-2"></i><span>200</span>
+                        </a>
+                        <a href="#" class="retzeet d-flex align-items-center">
+                            <i class="bi bi-arrow-repeat me-2"></i><span>100</span>
+                        </a>
+                        <a href="#" class="like d-flex align-items-center">
+                            <i class="bi bi-heart me-2"></i><span>120</span>
+                        </a>
+                        <a href="#" class="reply-share d-flex align-items-center">
+                            <i class="bi bi-share"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="post mb-3">
+                    <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil do tzeet">
+                    <p><strong>Gustavo Erick</strong> <span class="text-muted">@gustaerick</span> <span class="text-muted">Dez 9, 2024</span></p>
+                    <p>estudando uebe</p>
+                    <div class="acao d-flex justify-content-around align-items-center">
+                        <a href="#" class="reply-share d-flex align-items-center">
+                            <i class="bi bi-chat me-2"></i><span>200</span>
+                        </a>
+                        <a href="#" class="retzeet d-flex align-items-center">
+                            <i class="bi bi-arrow-repeat me-2"></i><span>100</span>
+                        </a>
+                        <a href="#" class="like d-flex align-items-center">
+                            <i class="bi bi-heart me-2"></i><span>120</span>
+                        </a>
+                        <a href="#" class="reply-share d-flex align-items-center">
+                            <i class="bi bi-share"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 px-3 d-none d-md-block">
+                <form class="search-container">
+                    <i class="bi bi-search search-icon"></i>
+                    <input class="search-input" type="search" placeholder="Username">
+                </form>
+                <div class="sugestao border p-3 rounded">
+                    <h5>Talvez você curta</h5>
+                    <div class="sugestao-item d-flex align-items-center mb-3">
+                        <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
+                        <div class="sugestao-item ms-3 flex-grow-1">
+                            <a href="#">Carlos</a>
+                        </div>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <div class="sugestao-item d-flex align-items-center mb-3">
+                        <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
+                        <div class="sugestao-item ms-3 flex-grow-1">
+                            <a href="#">Maria</a>
+                        </div>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <div class="sugestao-item d-flex align-items-center mb-3">
+                        <img class="foto_sugestao" src="https://avatars.githubusercontent.com/u/105880814?v=4" alt="foto de usuario sugerido">
+                        <div class="sugestao-item ms-3 flex-grow-1">
+                            <a href="#">Ana</a>
+                        </div>
+                        <button type="button" class="btn btn-primary">Seguir</button>
+                    </div>
+                    <a href="#">Mostrar mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <dialog id="tzeet-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i class="bi bi-x-lg"></i></button>
+    
+            <div class="post-container">
+                <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil">
+    
+                <div class="post-content">
+                    <textarea class="post-input" placeholder="O que você está pensando?"></textarea>
+    
+                    <div class="reply-settings">
+                        <i class="bi bi-globe"></i>
+                        <a href="#">Todos podem responder</a>
+                    </div>
+    
+                    <div class="post-actions">
+                        <div class="multimedia-icons">
+                            <i class="bi bi-card-image"></i>
+                            <i class="bi bi-filetype-gif"></i>
+                            <i class="bi bi-emoji-smile"></i>
+                            <i class="bi bi-list"></i>
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+    
+                        <div class="status-send">
+                            <span class="char-counter"></span>
+                            <span class="separator">|</span>
+                            <i class="bi bi-plus-circle add-tzeet"></i>
+                            <button class="send-btn" disabled>Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>    
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
