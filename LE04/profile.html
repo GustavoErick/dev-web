@@ -19,7 +19,7 @@
                     <li class="mb-3"><i class="bi bi-envelope"></i><a class="text-decoration-none" href="#">Messages</a></li>
                     <li class="mb-3"><i class="bi bi-person-fill"></i><a class="text-decoration-none" href="./profile.html">Profile</a></li>
                     <li class="mb-3"><i class="bi bi-three-dots"></i><a class="text-decoration-none" href="#">More</a></li>
-                    <button type="button" class="btn btn-primary">Tzeet</button>
+                    <button id="open-modal" type="button" class="btn btn-primary">Tzeet</button>
                 </ul>
             </div>
             <div class="col-9 col-md-7 px-4 border-end">
@@ -123,7 +123,42 @@
             </div>
         </div>
     </div>
+    <dialog id="tzeet-modal" class="dialog">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i class="bi bi-x-lg"></i></button>
     
+            <div class="post-container">
+                <img class="foto_perfil_post" src="https://avatars.githubusercontent.com/u/105515712?v=4" alt="foto de perfil">
+    
+                <div class="post-content">
+                    <textarea class="post-input" placeholder="O que você está pensando?"></textarea>
+    
+                    <div class="reply-settings">
+                        <i class="bi bi-globe"></i>
+                        <a href="#">Todos podem responder</a>
+                    </div>
+    
+                    <div class="post-actions">
+                        <div class="multimedia-icons">
+                            <i class="bi bi-card-image"></i>
+                            <i class="bi bi-filetype-gif"></i>
+                            <i class="bi bi-emoji-smile"></i>
+                            <i class="bi bi-list"></i>
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+    
+                        <div class="status-send">
+                            <span class="char-counter"></span>
+                            <span class="separator">|</span>
+                            <i class="bi bi-plus-circle add-tzeet"></i>
+                            <button class="send-btn" disabled>Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <script src="./index.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin=“anonymous"></script>
 </body>
 </html>

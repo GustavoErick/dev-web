@@ -1,45 +1,50 @@
-const textarea = document.querySelector(".post-input");
-const charCounter = document.querySelector(".char-counter");
-const sendButton = document.querySelector(".send-btn");
+const textareaHome = document.querySelector(".post-container .post-input");
+const charCounterHome = document.querySelector(".post-container .char-counter");
+const sendButtonHome = document.querySelector(".post-container .send-btn");
 
-textarea.addEventListener("input", () => {
-const remaining = 140 - textarea.value.length;
+const modal = document.getElementById("tzeet-modal");
+const openModalBtn = document.getElementById("open-modal");
+const closeModalBtn = document.getElementById("close-modal");
 
-if (remaining < 40 && remaining > 0) {
-    charCounter.style.color = "rgb(255, 200, 0)";
-    charCounter.textContent = remaining;
-} else if (remaining <= 0) {
-    charCounter.style.color = "rgb(255, 0, 0)";
-    charCounter.textContent = remaining;
-} else {
-    charCounter.textContent = remaining > 0 ? remaining : "";
-    charCounter.style.color = "black";
+const textareaModal = modal.querySelector(".post-input");
+const charCounterModal = modal.querySelector(".char-counter");
+const sendButtonModal = modal.querySelector(".send-btn");
+
+const MAX_CHARACTERS = 140;
+
+function updateCharCounter(textarea, counter, button) {
+    const remaining = MAX_CHARACTERS - textarea.value.length;
+
+    if (remaining < 40 && remaining > 0) {
+        counter.style.color = "rgb(255, 200, 0)"; 
+    } else if (remaining <= 0) {
+        counter.style.color = "rgb(255, 0, 0)"; 
+    } else {
+        counter.style.color = "black"; 
+    }
+
+    counter.textContent = remaining;
+    button.disabled = textarea.value.length === 0 || remaining < 0; 
 }
 
-sendButton.disabled = textarea.value.length === 0 || remaining < 0;
+textareaHome.addEventListener("input", () => {
+    updateCharCounter(textareaHome, charCounterHome, sendButtonHome);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("tzeet-modal");
-    const openModalBtn = document.getElementById("open-modal");
-    const closeModalBtn = document.getElementById("close-modal");
+textareaModal.addEventListener("input", () => {
+    updateCharCounter(textareaModal, charCounterModal, sendButtonModal);
+});
 
-    openModalBtn.addEventListener("click", () => {
-        console.log("Abrindo modal...");
-        modal.showModal();
-    });
+openModalBtn.addEventListener("click", () => {
+    modal.showModal();
+});
 
-    closeModalBtn.addEventListener("click", () => {
-        console.log("Fechando modal...");
+closeModalBtn.addEventListener("click", () => {
+    modal.close();
+});
+
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
         modal.close();
-    });
-
-    // Fechar modal ao clicar fora dele
-    modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            console.log("Clicou fora do modal, fechando...");
-            modal.close();
-        }
-    });
+    }
 });
-

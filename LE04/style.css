@@ -217,15 +217,17 @@ button.btn-primary {
 
 .post-container {
     display: flex;
-    width: 600px;
+    width: 100%;
     background: white;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+    border-bottom: 1px solid #ddd;
 }
 
 .post-content {
     flex: 1;
+    width: 100%;
 }
 
 .post-input {
@@ -335,158 +337,41 @@ button.btn-primary {
     cursor: not-allowed;
 }
 
-/* Modal */
-.modal {
-    width: 600px;
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Fundo escuro ao abrir o modal */
-.modal::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Botão de fechar */
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    float: right;
-}
-
-/* Container do post */
-.post-container {
-    display: flex;
-    background: white;
-    padding: 15px;
-}
-
-/* Área de entrada */
-.post-content {
-    flex: 1;
-}
-
-.post-input {
+.dialog {
     width: 100%;
-    height: 50px;
+    max-width: 600px;
     border: none;
-    resize: none;
-    font-size: 16px;
-    padding: 10px;
-    outline: none;
-}
-
-/* Configuração de resposta */
-.reply-settings {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    font-size: 14px;
-    color: #1D9BF0;
-    cursor: pointer;
-}
-
-.reply-settings i {
-    margin-right: 5px;
-}
-
-.reply-settings:hover {
-    background: rgba(29, 155, 240, 0.1);
-    padding: 5px;
-    border-radius: 10px;
-}
-
-/* Ícones de mídia */
-.multimedia-icons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.multimedia-icons i {
-    font-size: 18px;
-    color: rgb(83, 100, 113);
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 50%;
-}
-
-.multimedia-icons i:hover {
-    background: rgba(29, 155, 240, 0.1);
-}
-
-/* Status e envio */
-.status-send {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Botão de envio */
-.send-btn {
-    background: rgb(29, 155, 240);
-    color: white;
-    font-size: 14px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.send-btn:disabled {
-    background: rgba(29, 155, 240, 0.5);
-    cursor: not-allowed;
-}
-
-/* Garante que o modal inicie oculto */
-.modal {
-    width: 500px;
-    max-width: 90%;
     padding: 20px;
-    border: none;
     border-radius: 10px;
-    background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: none; /* O modal começa escondido */
+    background: white;
 }
 
-/* Quando o modal for aberto, ele aparece corretamente */
-.modal[open] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-/* Fundo escurecido quando o modal está ativo */
-.modal::backdrop {
+.dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Ajuste do conteúdo interno do modal */
-.modal-content {
-    width: 100%;
-    max-width: 480px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Botão de fechar */
 .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background: none;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    align-self: flex-end;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 100%; 
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
